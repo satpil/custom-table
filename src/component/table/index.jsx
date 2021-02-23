@@ -23,9 +23,9 @@ function MainTable({ children, classes, ...restprops }) {
   return (
     <Table>
       <Table.Row>
-        {Object.keys(header).map(header => {
+        {Object.keys(header).map((header, index) => {
           return (
-            <Table.RowHeader>{header}</Table.RowHeader>
+            <Table.RowHeader key={index}>{header}</Table.RowHeader>
           )
         })}
       </Table.Row>

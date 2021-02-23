@@ -6,7 +6,7 @@ function App() {
   return (
     <>
     <MainTable data={Data} header={Header}/>
-    <MainPagination/>
+    <MainPagination data={Data} entryCount={5}/>
     </>
   );
 }
