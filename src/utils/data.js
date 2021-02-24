@@ -57,3 +57,5 @@ export const Header = {
     NAME: 'name',
     AGE: 'age'
 }
+
+export const EntryCount = 5;

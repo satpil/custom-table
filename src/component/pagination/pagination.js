@@ -17,9 +17,9 @@ export const PaginationList = styled.a`
     background-color: #ddd;
   }
   &.active {
-    background-color: #4caf50;
-    color: white;
-    border: 1px solid #4caf50;
+    background-color: #ddd;
+    // color: white;
+    // border: 1px solid #4caf50;
   }
   &:first-child {
     border-top-left-radius: 5px;
@@ -30,3 +30,7 @@ export const PaginationList = styled.a`
     border-bottom-right-radius: 5px;
   }
 `;
+
+export const active1 = styled.div`
+background-color: #ddd;
+`

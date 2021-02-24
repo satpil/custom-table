@@ -19,7 +19,8 @@ Table.Column = function tableColumn({ children, classes, ...restprops }) {
 };
 
 function MainTable({ children, classes, ...restprops }) {
-  const { data, header } = restprops;
+  const { data, header, skip } = restprops;
+  let sliceData = data.slice(skip, skip + 5)
   return (
     <Table>
       <Table.Row>
@@ -29,7 +30,7 @@ function MainTable({ children, classes, ...restprops }) {
           )
         })}
       </Table.Row>
-      {data.map((item, index) => {
+      {sliceData.map((item, index) => {
         return (
           <Table.Row key={index}>
             {Object.values(item).map(col => {
