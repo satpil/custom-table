@@ -1,3 +1,5 @@
-export {default as MainTable} from './component/table';
-export {default as MainPagination} from './component/pagination';
-export {default as paginationValue} from './utils/calculateSkip';
+import MainTable from './component/table';
+import MainPagination from './component/pagination';
+import paginationValue from './utils/calculateSkip';
+
+export {MainTable,MainPagination,paginationValue};
