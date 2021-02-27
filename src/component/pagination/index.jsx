@@ -15,7 +15,7 @@ Pagination.List = function PaginationListItem({
 
 function MainPagination({ children, classes, ...restprops }) {
   const [pageArray, setPageArray] = React.useState([]);
-  const [selectBtn,setSelectBtn] = React.useState(0);
+  const [selectBtn, setSelectBtn] = React.useState(0);
 
   const { entryCount, data, pageValue } = restprops
 
@@ -28,14 +28,14 @@ function MainPagination({ children, classes, ...restprops }) {
       countArray.push(len);
       setPageArray(countArray);
     }
-  },[entryCount,data])
+  }, [entryCount, data])
   return (
     <React.Fragment>
       <Pagination>
         <Pagination.List>&laquo;</Pagination.List>
         {pageArray.map((item, index) => {
           return (
-            <Pagination.List className={selectBtn === index ? 'active' : ''} key={index} onClick={() => {pageValue(index);setSelectBtn(index)}}>{index + 1}</Pagination.List>
+            <Pagination.List className={selectBtn === index ? 'active' : ''} key={index} onClick={() => { pageValue(index); setSelectBtn(index) }}>{index + 1}</Pagination.List>
           )
         })}
         <Pagination.List>&raquo;</Pagination.List>
