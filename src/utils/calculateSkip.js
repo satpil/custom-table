@@ -1,5 +1,5 @@
-function PaginationValue (props){
-    const {event,entryCount} = props;
+
+function PaginationValue (event,entryCount){
     let skipCal = event * entryCount   /** Here EntryCount is given by entry dropdown */
     return skipCal;
 }
